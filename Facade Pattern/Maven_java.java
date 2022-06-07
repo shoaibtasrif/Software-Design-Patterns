@@ -6,7 +6,7 @@
 package com.mycompany.maven_java;
 
 /**
- * 
+ * facade pattern - sourcemaking.com
  * @author shoai
  */
 public class Maven_java {
