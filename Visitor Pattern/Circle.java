@@ -8,20 +8,20 @@ package com.mycompany.maven_java;
  *
  * @author shoai
  */
+public class Circle extends Dot {
+    private int radius;
 
-public class PointPolar {
-    private double radius, angle;
-
-    public PointPolar(double radius, double angle) {
+    public Circle(int id, int x, int y, int radius) {
+        super(id, x, y);
         this.radius = radius;
-        this.angle = angle;
     }
 
-    public void  rotate(int angle) {
-        this.angle += angle % 360;
+    @Override
+    public String accept(Visitor visitor) {
+        return visitor.visitCircle(this);
     }
 
-    public String toString() {
-        return "[" + radius + "@" + angle + "]";
+    public int getRadius() {
+        return radius;
     }
 }
